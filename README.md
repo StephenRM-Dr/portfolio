@@ -56,7 +56,10 @@ Abre index.html en tu navegador.
 O usa una extensión como Live Server en VSCode para vista en tiempo real.
 
 📧 Contacto
-Si quieres colaborar o tienes alguna propuesta, puedes escribirme a: 📩 stevenrm09@gmail.com
+Si quieres colaborar o tienes alguna propuesta, puedes escribirme a: 
+📩 stevenrm09@gmail.com
+💼 LinkedIn: https://www.linkedin.com/in/steven-rinc%C3%B3n-medina-a34487117
+
 
 📜 Licencia
 Este proyecto está bajo la licencia MIT. Puedes usarlo y modificarlo libremente, pero por favor da el crédito correspondiente.
