@@ -1,0 +1,61 @@
+<!DOCTYPE html> <!-- Declaración de tipo de documento HTML5 -->
+<html lang="es"> <!-- Idioma principal del contenido -->
+
+<head>
+    <meta charset="UTF-8"> <!-- Soporte para caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Diseño responsive -->
+    <title>Sobre mí - Stephen Rincón</title> <!-- Título que aparece en la pestaña -->
+    <link rel="stylesheet" href="css/styles.css"> <!-- Vincula el CSS global -->
+</head>
+
+<body>
+
+<!-- ====== Encabezado con navegación ====== -->
+<header>
+    <nav>
+        <!-- Logo o nombre que enlaza a la página principal -->
+        <a href="index.html" class="logo">Stephen.dev</a>
+        <!-- Menú de navegación -->
+        <div class="nav-links">
+            <a href="about.html" class="active">Sobre mí</a>
+            <a href="projects.html">Proyectos</a>
+            <a href="cv.html">CV</a>
+            <a href="contact.html">Contacto</a>
+        </div>
+    </nav>
+</header>
+
+<!-- ====== Contenido principal ====== -->
+<main>
+    <h1>Sobre mí</h1>
+    <!-- Sección con imagen y texto descriptivo -->
+    <section class="about-section">
+        <img src="assets/img/homepic.jpg" alt="Stephen Rincón"> <!-- Foto personal -->
+        <div>
+            <p>Soy un desarrollador Backend/Frontend especializado en PHP, MVC y diseño con Tailwind CSS...</p>
+            <p>Con experiencia en optimización de rendimiento, internacionalización y automatización...</p>
+            <p>Me encanta aprender nuevas tecnologías y mejorar mis habilidades constantemente. Siempre estoy buscando nuevos desafíos que me permitan crecer como profesional y contribuir a proyectos interesantes.</p>
+        </div>
+    </section>
+</main>
+
+<!-- ====== Pie de página ====== -->
+<footer>
+    &copy; 2025 Stephen Rincón - Todos los derechos reservados
+</footer>
+
+<!-- ====== Script para animar la entrada de la sección ====== -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // Inicialmente oculta la sección
+        document.querySelector('.about-section').style.opacity = 0;
+        // Después de 200ms, aplica transición y la muestra
+        setTimeout(() => {
+            document.querySelector('.about-section').style.transition = "opacity 1s";
+            document.querySelector('.about-section').style.opacity = 1;
+        }, 200);
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+# =========================
+# Archivos y carpetas del sistema
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Archivos de editores/IDE
+# =========================
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# =========================
+# Dependencias y build
+# =========================
+node_modules/
+dist/
+build/
+
+# =========================
+# Archivos temporales
+# =========================
+*.log
+*.tmp
+*.temp
+
+# =========================
+# Archivos de entorno y configuración sensible
+# =========================
+.env
+.env.local
+.env.*.local
+
+# =========================
+# Archivos de caché
+# =========================
+.cache/
+*.cache
+*.swp
+
+# =========================
+# Archivos de backend (si usas PHP)
+# =========================
+vendor/
+composer.lock
+
+# =========================
+# Archivos generados por el sistema operativo
+# =========================
+ehthumbs.db
+Icon?

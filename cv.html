@@ -1,0 +1,49 @@
+<!DOCTYPE html> <!-- Documento HTML5 -->
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8"> <!-- Soporte para caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Diseño responsive -->
+    <title>CV - Stephen Rincón</title> <!-- Título en la pestaña -->
+    <link rel="stylesheet" href="css/styles.css"> <!-- Estilos globales -->
+</head>
+
+<body>
+
+<!-- ====== Encabezado ====== -->
+<header>
+    <nav>
+        <a href="index.html" class="logo">Stephen.dev</a>
+        <div class="nav-links">
+            <a href="about.html">Sobre mí</a>
+            <a href="projects.html">Proyectos</a>
+            <a href="cv.html" class="active">CV</a>
+            <a href="contact.html">Contacto</a>
+        </div>
+    </nav>
+</header>
+
+<!-- ====== Contenido principal ====== -->
+<main>
+    <h1>Mi Currículum</h1>
+    <p>Puedes visualizarlo directamente aquí o descargarlo.</p>
+    <!-- Contenedor con iframe para mostrar el PDF -->
+    <div class="cv-container">
+        <iframe src="/assets/docs/CV_Steven_Rincon_Medina.pdf" width="100%" height="600px" style="border:none;"></iframe>
+    </div>
+    <!-- Botón para descargar el CV -->
+    <a href="/assets/docs/CV_Steven_Rincon_Medina.pdf" download class="btn">Descargar CV</a>
+</main>
+
+<!-- ====== Pie de página ====== -->
+<footer>
+    &copy; 2025 Stephen Rincón - Todos los derechos reservados
+</footer>
+
+<!-- ====== Script simple ====== -->
+<script>
+    console.log("CV cargado correctamente"); // Mensaje de control en consola
+</script>
+
+</body>
+</html>
