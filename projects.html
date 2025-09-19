@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos - Stephen Rincón</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <!-- ====== Encabezado ====== -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Stephen.dev</a>
+            <div>
+                <a href="about.html">Sobre mí</a>
+                <a href="projects.html" class="active">Proyectos</a>
+                <a href="cv.html">CV</a>
+                <a href="contact.html">Contacto</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ====== Contenido principal ====== -->
+    <main>
+        <h1>Mis Proyectos</h1>
+        <p>Aquí encontrarás una selección de mis trabajos más relevantes.</p>
+
+        <!-- Contenedor donde se inyectarán las tarjetas -->
+        <div id="projects-container" class="projects-grid"></div>
+    </main>
+
+    <!-- ====== Footer ====== -->
+    <footer>
+        &copy; 2025 Stephen Rincón - Todos los derechos reservados
+    </footer>
+
+    <!-- ====== Script para cargar proyectos dinámicamente ====== -->
+    <script>
+        // Array de proyectos (puedes añadir más fácilmente)
+        const projects = [
+            {
+                title: 'Sistema de Blog en PHP MVC',
+                description: 'Aplicación modular con PDO, validación y diseño con Tailwind CSS.',
+                link: 'https://github.com/stephen/blog-mvc',
+                tags: ['PHP', 'MVC', 'TailwindCSS']
+            },
+            {
+                title: 'API REST para Inventario',
+                description: 'API construida en PHP con autenticación JWT y manejo de errores.',
+                link: 'https://github.com/stephen/api-inventario',
+                tags: ['PHP', 'API', 'MySQL']
+            },
+            {
+                title: 'Landing Page Responsive',
+                description: 'Página optimizada para SEO con Tailwind CSS y JavaScript.',
+                link: 'https://github.com/stephen/landing-page',
+                tags: ['HTML', 'CSS', 'JavaScript']
+            }
+        ];
+
+        // Seleccionamos el contenedor
+        const container = document.getElementById('projects-container');
+
+        // Recorremos el array y creamos las tarjetas
+        projects.forEach(project => {
+            const card = document.createElement('div');
+            card.className = 'project-card';
+
+            card.innerHTML = `
+                <h2>${project.title}</h2>
+                <p>${project.description}</p>
+                <div class="tags">
+                    ${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                </div>
+                <a href="${project.link}" target="_blank" class="btn">Ver Proyecto</a>
+            `;
+
+            container.appendChild(card);
+        });
+    </script>
+
+</body>
+</html>
