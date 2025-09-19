@@ -261,3 +261,22 @@ footer {
         height: 150px;
     }
 }
+/* ====== Contenedor del CV ======
+   - Centra y limita el ancho del iframe que muestra el PDF
+   - Mantiene consistencia con el diseño general del portafolio
+*/
+.cv-container {
+    margin: 2rem auto;       /* Centra el contenedor y añade espacio vertical */
+    max-width: 900px;        /* Limita el ancho máximo para buena legibilidad */
+}
+
+/* ====== Iframe del CV ======
+   - Muestra el PDF embebido sin bordes
+   - Ocupa todo el ancho disponible del contenedor
+   - Altura fija para que sea visible sin scroll excesivo
+*/
+.cv-container iframe {
+    width: 100%;             /* Ocupa todo el ancho del contenedor */
+    height: 600px;           /* Altura fija para buena visualización */
+    border: none;            /* Elimina el borde por defecto del iframe */
+}
