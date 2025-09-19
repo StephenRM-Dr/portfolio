@@ -1,0 +1,33 @@
+# =========================
+# Normalización de finales de línea
+# =========================
+# Forzar LF (Unix) en todos los archivos de texto
+* text=auto eol=lf
+
+# =========================
+# Archivos de código fuente
+# =========================
+*.html text
+*.css  text
+*.js   text
+*.php  text
+*.json text
+*.md   text
+
+# =========================
+# Archivos binarios (no hacer diff)
+# =========================
+*.jpg  binary
+*.jpeg binary
+*.png  binary
+*.gif  binary
+*.webp binary
+*.pdf  binary
+*.ico  binary
+
+# =========================
+# Configuración de exportación
+# =========================
+# Evitar incluir archivos de configuración local en exportaciones
+.gitattributes export-ignore
+.gitignore     export-ignore

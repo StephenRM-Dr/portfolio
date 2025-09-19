@@ -1,0 +1,88 @@
+<!DOCTYPE html> <!-- Documento HTML5 -->
+<html lang="es"> <!-- Idioma principal -->
+
+<head>
+    <meta charset="UTF-8"> <!-- Soporte para caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Diseño responsive -->
+    <title>Contacto - Stephen Rincón</title> <!-- Título en la pestaña -->
+    <link rel="stylesheet" href="css/styles.css"> <!-- Estilos globales -->
+</head>
+
+<body>
+
+<!-- ====== Encabezado ====== -->
+<header>
+    <nav>
+        <a href="index.html" class="logo">Stephen.dev</a>
+        <div class="nav-links">
+            <a href="about.html">Sobre mí</a>
+            <a href="projects.html">Proyectos</a>
+            <a href="cv.html">CV</a>
+            <a href="contact.html" class="active">Contacto</a>
+        </div>
+    </nav>
+</header>
+
+<!-- ====== Contenido principal ====== -->
+<main>
+    <h1>Contacto</h1>
+    <p>Completa el formulario y se abrirá tu cliente de correo o Gmail para enviarme un mensaje.</p>
+
+    <!-- Formulario de contacto -->
+    <form id="contact-form" class="contact-form">
+        <input type="text" id="name" placeholder="Tu nombre" required> <!-- Campo nombre -->
+        <input type="email" id="email" placeholder="Tu correo" required> <!-- Campo email -->
+        <input type="text" id="subject" placeholder="Asunto" required> <!-- Campo asunto -->
+        <textarea id="message" placeholder="Tu mensaje" required></textarea> <!-- Campo mensaje -->
+        <button type="submit" class="btn">Enviar</button> <!-- Botón de envío -->
+    </form>
+</main>
+
+<!-- ====== Pie de página ====== -->
+<footer>
+    &copy; 2025 Stephen Rincón - Todos los derechos reservados
+</footer>
+
+<!-- ====== Script con detección inteligente ====== -->
+<script>
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault(); // Evita que el formulario recargue la página
+
+    // ====== 1. Obtener valores del formulario ======
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const subject = document.getElementById('subject').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    // ====== 2. Dirección de destino (tu correo real) ======
+    const to = "Stevenrm09@gmail.com";
+
+    // ====== 3. Detectar si el usuario probablemente usa Gmail ======
+    const ua = navigator.userAgent.toLowerCase();
+    const isMobile = /android|iphone|ipad|ipod/.test(ua); // Detecta dispositivos móviles
+    const prefersGmail = ua.includes("chrome") || ua.includes("crios") || ua.includes("fxios"); // Detecta navegadores comunes para Gmail
+
+    // ====== 4. Construir enlaces ======
+    // Enlace para Gmail web
+    const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(to)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(
+        `Hola, soy ${name} (${email}):\n\n${message}`
+    )}`;
+
+    // Enlace para cliente de correo local
+    const mailtoLink = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
+        `Hola, soy ${name} (${email}):\n\n${message}`
+    )}`;
+
+    // ====== 5. Lógica de apertura ======
+    if (prefersGmail || isMobile) {
+        // Si es móvil o Chrome, abrir Gmail web en una nueva pestaña
+        window.open(gmailLink, '_blank');
+    } else {
+        // Si no, abrir cliente de correo predeterminado
+        window.location.href = mailtoLink;
+    }
+});
+</script>
+
+</body>
+</html>
