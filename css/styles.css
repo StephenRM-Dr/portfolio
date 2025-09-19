@@ -280,3 +280,28 @@ footer {
     height: 600px;           /* Altura fija para buena visualización */
     border: none;            /* Elimina el borde por defecto del iframe */
 }
+/* Estado normal de los enlaces */
+.nav-links a {
+    color: #ffffff; /* Color original */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Animación suave */
+}
+
+/* Hover para escritorio */
+.nav-links a:hover {
+    color: #00bcd4; /* Color al pasar el mouse */
+}
+
+/* ===== Estilos para móviles ===== */
+@media (max-width: 768px) {
+    /* Simular hover con active/focus en móviles */
+    .nav-links a:active,
+    .nav-links a:focus {
+        color: #00bcd4; /* Color al tocar */
+    }
+
+    /* Asegurar que vuelva al color original */
+    .nav-links a {
+        color: #ffffff;
+    }
+}
