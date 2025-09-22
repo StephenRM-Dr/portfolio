@@ -1,64 +1,104 @@
-# 🌐 Portafolio de Stephen Rincón
+# 🌐 Portafolio Personal – Steven Rincón Medina
 
-Este es mi portafolio personal, desarrollado como un sitio web **estático** y **responsive**, que presenta mi experiencia, habilidades y proyectos destacados como desarrollador **Backend/Frontend** especializado en **PHP, MVC, JavaScript** y **Tailwind CSS**.
+**Versión:** 0.1.0  
+**Estado:** Activo – Publicado en GitHub Pages  
+**Descripción:**  
+Landing page profesional con scrollytelling, optimizada para destacar habilidades, tecnologías y proyectos de desarrollo web.  
+Diseñada para ser ligera, responsiva y con animaciones fluidas que mejoran la experiencia de usuario.
 
-## 🚀 Características
+---
 
-- **Diseño responsive**: Adaptado para móviles, tablets y escritorio.
-- **Estilo consistente**: Modo oscuro y tipografía clara.
-- **Contenido dinámico**: Proyectos cargados con JavaScript desde un array.
-- **Accesibilidad**: Etiquetas y atributos optimizados para lectores de pantalla.
-- **Páginas incluidas**:
-  - `index.html` → Página principal.
-  - `about.html` → Información sobre mí.
-  - `projects.html` → Listado dinámico de proyectos.
-  - `cv.html` → Visualización y descarga de mi CV.
-  - `contact.html` → Formulario que abre cliente de correo o Gmail.
+## 🚀 Características principales
 
-## 🛠️ Tecnologías utilizadas
+- **Diseño de una sola página (Landing Page)** con navegación interna.
+- **Scrollytelling bidireccional**: las secciones aparecen con animaciones al entrar y salir de la vista.
+- **Galería interactiva de tecnologías** con efecto de expansión al pasar el mouse.
+- **Sección "Sobre mí"** en layout de dos columnas (imagen izquierda, texto profesional a la derecha).
+- **Formulario de contacto inteligente**:
+  - Validación en vivo de campos.
+  - Envío directo a Gmail en navegador o cliente de correo predeterminado.
+- **Estilo visual coherente** con esquema de colores oscuros y acentos en azul.
+- **Optimización de estructura** para carga rápida y mantenimiento sencillo.
 
-- **HTML5** → Estructura semántica.
-- **CSS3** → Estilos y diseño responsive.
-- **JavaScript (ES6+)** → Interactividad y carga dinámica de contenido.
-- **Tailwind CSS** (en algunos módulos) → Estilizado rápido y consistente.
-- **Flexbox & Grid** → Layout adaptable.
-- **Git & GitHub** → Control de versiones y despliegue.
+---
+
+## 📸 Vista previa
+
+### Hero y navegación
+![Vista previa Hero](assets/img/hero.png)
+
+### Galería de tecnologías
+![Vista previa Galería](assets/img/tecnologias.png)
+
+### Sección Sobre mí
+![Vista previa Sobre mí](assets/img/sobremi.png)
+
+### Formulario de contacto inteligente
+![Vista previa Contacto](assets/img/contacto.png)
+
+---
 
 ## 📂 Estructura del proyecto
 
-```plaintext
-.
-├── index.html          # Página principal
-├── about.html          # Sobre mí
-├── projects.html       # Proyectos dinámicos
-├── cv.html             # CV embebido y descargable
-├── contact.html        # Formulario de contacto
-├── css/
-│   └── styles.css      # Estilos globales
-├── js/
-│   └── main.js         # Scripts principales
+
+
+PORTFOLIO/
+│
 ├── assets/
-│   ├── img/            # Imágenes
-│   └── docs/           # Documentos (CV en PDF)
-├── .gitignore          # Archivos y carpetas ignorados por Git
-├── .gitattributes      # Configuración de atributos de Git
-└── README.md           # Documentación del proyecto
-📦 Instalación y uso
-Clonar el repositorio:
+│   ├── css/
+│   │   └── styles.css
+│   ├── js/
+│   │   └── main.js
+│   ├── img/ 
+|   |    └──contacto.png
+|   |    └──hero.png
+|   |    └──home.png
+|   |    └──sobremi.png
+|   |    └──tecnologias.png
+│   └── docs/
+│       └── cv.pdf
+├── index.html 
+├── .gitattributes 
+├── .gitignore 
+└── README.md
 
-bash
-git clone https://github.com/StephenRM-Dr/portfolio.git
+---
 
-##Abrir el proyecto:
+## 🛠️ Tecnologías utilizadas
 
-Abre index.html en tu navegador.
+- **HTML5** – Estructura semántica y accesible.
+- **CSS3 / Tailwind CSS (parcial)** – Estilos y animaciones personalizadas.
+- **JavaScript (ES6+)** – Lógica de interacción y scrollytelling.
+- **Intersection Observer API** – Animaciones al hacer scroll.
+- **Git & GitHub Pages** – Control de versiones y despliegue.
 
-O usa una extensión como Live Server en VSCode para vista en tiempo real.
+---
+
+## 📜 Cambios en la versión 0.1.0
+
+- Eliminación de páginas separadas (`about.html`, `contact.html`) → contenido integrado en `index.html`.
+- Limpieza de imágenes no utilizadas → solo se conserva `home.png` y recursos para README.
+- Reestructuración de carpetas → `assets/` para CSS, JS e imágenes.
+- Implementación de **scrollytelling bidireccional** con efectos variados (`fade-up`, `fade-left`, `fade-right`, `zoom-in`).
+- Mejora de la **galería de tecnologías** con efecto de expansión fluido y responsivo.
+- Rediseño de la sección **Sobre mí** con layout profesional.
+- Integración de **formulario de contacto inteligente**:
+  - Validación en vivo.
+  - Envío directo a Gmail o cliente de correo.
+- Normalización de saltos de línea a **LF** para evitar inconsistencias en Git.
+
+---
+
+## 📦 Instalación y uso local
+
+1. Clonar el repositorio:
+   ```bash
+   git clone https://github.com/StephenRM-Dr/portfolio.git
 
 📧 Contacto
 Si quieres colaborar o tienes alguna propuesta, puedes escribirme a: 
 📩 stevenrm09@gmail.com
-💼 LinkedIn: https://www.linkedin.com/in/steven-rinc%C3%B3n-medina-a34487117
+💼 LinkedIn: www.linkedin.com/in/steven-rincon-medina
 
 
 📜 Licencia
