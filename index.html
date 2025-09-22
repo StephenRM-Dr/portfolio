@@ -1,36 +1,167 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Steven Rincón - Portafolio</title>
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Steven Rincón - Portafolio</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 </head>
 <body>
 
-    <header>
-        <nav>
-            <a href="index.html" class="logo">Steven.dev</a>
-            <div class="nav-links">
-                <a href="about.html">Sobre mí</a>
-                <a href="projects.html">Proyectos</a>
-                <a href="cv.html">CV</a>
-                <a href="contact.html">Contacto</a>
-            </div>
-        </nav>
-    </header>
+  <!-- ===== HEADER ===== -->
+  <header>
+    <nav>
+      <a href="#portada" class="logo">Steven.dev</a>
+      <div class="nav-links">
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#tecnologias">Tecnologías</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#cv">CV</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+    </nav>
+  </header>
 
-    <main>
-        <img src="./assets/img/home.png" alt="Steven Rincón">
-        <h1>Hola, soy Steven</h1>
-        <p>Desarrollador Backend/Frontend especializado en PHP, MVC y diseño con Tailwind CSS.</p>
-        <a href="projects.html" class="btn">Ver mis proyectos</a>
-    </main>
+  <!-- ===== PORTADA ===== -->
+  <section id="portada" class="section hidden portada zoom-in">
+    <figure>
+      <img src="./assets/img/home.png" alt="Foto de Steven Rincón" />
+    </figure>
+    <h1>Hola, soy Steven</h1>
+    <p>Desarrollador Backend/Frontend especializado en PHP, MVC y diseño con Tailwind CSS.</p>
+    <a href="#proyectos" class="btn">Ver mis proyectos</a>
+  </section>
 
-    <footer>
-        &copy; 2025 Steven Rincón - Todos los derechos reservados
-    </footer>
+  <!-- ===== SOBRE MÍ ===== -->
+<section id="sobre-mi" class="section hidden fade-left">
+  <figure>
+    <img src="./assets/img/home.png" alt="Steven Rincón desarrollador" />
+  </figure>
+  <div class="content">
+    <h2>Sobre mí</h2>
+    <p>Desarrollador Full Stack especializado en PHP, MVC y Tailwind CSS, con experiencia en optimización, internacionalización y automatización de procesos.</p>
+    <p>Enfocado en crear soluciones modulares, seguras y escalables, combinando rendimiento y estética para ofrecer experiencias digitales de alto impacto.</p>
+  </div>
+</section>
 
-    <script src="js/main.js"></script>
+
+  <!-- ===== TECNOLOGÍAS ===== -->
+    <section id="tecnologias" class="section hidden tech-stack fade-right">
+    <h2>Tecnologías que manejo</h2>
+    <!-- Cambia la clase aquí para probar la animación -->
+     <div id="imagenes">
+    
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"  title="JavaScript">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" title="CSS3">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"  title="HTML5">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg"  title="MySQL">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg"   title="PHP">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original-wordmark.svg"  title="Tailwind CSS">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/wordpress/wordpress-original.svg" title="WordPress">
+    
+    </div>
+    </section>
+    
+
+
+
+
+
+
+  <!-- ===== PROYECTOS ===== -->
+  <section id="proyectos" class="section hidden proyectos fade-up">
+    <h2>Proyectos destacados</h2>
+    <p>Explora algunos de mis trabajos más recientes y cómo he ayudado a clientes a lograr sus objetivos.</p>
+    <div id="projects-container" class="projects-grid"></div>
+  </section>
+
+  <!-- ===== CV ===== -->
+  <section id="cv" class="section hidden cv-section zoom-in">
+    <h2>Mi Currículum</h2>
+    <p>Puedes visualizarlo directamente aquí o descargarlo.</p>
+    <div class="cv-container">
+      <iframe src="assets/docs/cv.pdf" title="Currículum de Steven Rincón en formato PDF"></iframe>
+    </div>
+    <a href="assets/docs/cv.pdf" download class="btn">Descargar CV</a>
+  </section>
+
+  <!-- ===== CONTACTO ===== -->
+<section id="contacto" class="section hidden fade-up">
+  <h2>Contacto</h2>
+  <p>¿Quieres trabajar conmigo o tienes un proyecto en mente? Escríbeme directamente.</p>
+
+  <form onsubmit="return enviarCorreo()" class="contact-form" id="contactForm">
+    <div class="form-group">
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Correo electrónico</label>
+      <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+    </div>
+
+    <div class="form-group">
+      <label for="mensaje">Mensaje</label>
+      <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+    </div>
+
+    <button type="submit" class="btn" id="btnEnviar" disabled>Enviar mensaje</button>
+  </form>
+</section>
+
+
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    &copy; 2025 Steven Rincón - Todos los derechos reservados
+  </footer>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script src="assets/js/main.js"></script>
+  <script>
+    const projects = [
+      {
+        title: 'Sistema de Blog en PHP MVC',
+        description: 'Aplicación modular con PDO, validación y diseño con Tailwind CSS.',
+        link: 'https://github.com/Steven/blog-mvc',
+        tags: ['PHP', 'MVC', 'TailwindCSS']
+      },
+      {
+        title: 'API REST para Inventario',
+        description: 'API construida en PHP con autenticación JWT y manejo de errores.',
+        link: 'https://github.com/Steven/api-inventario',
+        tags: ['PHP', 'API', 'MySQL']
+      },
+      {
+        title: 'Landing Page Responsive',
+        description: 'Página optimizada para SEO con Tailwind CSS y JavaScript.',
+        link: 'https://github.com/Steven/landing-page',
+        tags: ['HTML', 'CSS', 'JavaScript']
+      },
+      {
+        title: 'Sanitización de PDFs con Ghostscript',
+        description: 'Sistema que convierte documentos a PDF usando Ghostscript.',
+        link: 'https://github.com/StephenRM-Dr/sanitize_pdf',
+        tags: ['PHP', 'Ghostscript', 'HTML']
+      }
+    ];
+
+    const container = document.getElementById('projects-container');
+    projects.forEach(project => {
+      const card = document.createElement('div');
+      card.className = 'project-card';
+      card.innerHTML = `
+        <h3>${project.title}</h3>
+        <p>${project.description}</p>
+        <div class="tags">
+          ${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+        </div>
+        <a href="${project.link}" target="_blank" class="btn">Ver Proyecto</a>
+      `;
+      container.appendChild(card);
+    });
+  </script>
 </body>
 </html>
