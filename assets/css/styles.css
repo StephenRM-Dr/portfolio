@@ -443,4 +443,13 @@ footer {
     transition: transform 0.1s ease;
   }
 }
-
+.btn-lang {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.btn-lang img {
+  display: inline-block;
+  vertical-align: middle;
+}

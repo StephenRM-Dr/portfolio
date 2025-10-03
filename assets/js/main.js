@@ -29,13 +29,26 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
     }
+
+        /* === CAMBIO DE IDIOMA === */
+        const langToggle = document.getElementById('lang-toggle');
+        if (langToggle) {
+            langToggle.addEventListener('click', () => {
+                if (window.location.href.includes("index-en.html")) {
+                    window.location.href = "index.html"; // Cambia a español
+                } else {
+                    window.location.href = "index-en.html"; // Cambia a inglés
+                }
+            });
+        }
+
 });
 
 /* === FUNCIÓN ENVÍO CORREO === */
 function enviarCorreo() {
-    const nombre = document.getElementById('nombre').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const mensaje = document.getElementById('mensaje').value.trim();
+    const nombre = document.getElementById('nombre')?.value.trim();
+    const email = document.getElementById('email')?.value.trim();
+    const mensaje = document.getElementById('mensaje')?.value.trim();
 
     if (!nombre || !email || !mensaje) {
         alert("Por favor, completa todos los campos antes de enviar.");
